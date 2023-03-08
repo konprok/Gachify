@@ -1,0 +1,99 @@
+﻿<Window x:Class="projekt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:projekt"
+        mc:Ignorable="d"
+        Title="Music Player" Height="600" Width="700" WindowStyle="SingleBorderWindow" MinHeight="600" MinWidth="700">
+
+    <Window.Resources>
+        <ImageBrush x:Key="next" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\next.png"/>
+        <ImageBrush x:Key="previous" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\previous.png" />
+        <ImageBrush x:Key="play" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\play.png" />
+        <ImageBrush x:Key="pause" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\pause.png" />
+        <ImageBrush x:Key="volume" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\volume.png" />
+        <ImageBrush x:Key="shuffle" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\shuffle.png" />
+        <ImageBrush x:Key="alphabetical" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\alphabetical.png" />
+        <ImageBrush x:Key="muted" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\muted.png" />
+        <ImageBrush x:Key="confirm" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\confirm.png" />
+        <ImageBrush x:Key="addPlaylist" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\plus.png" />
+        <ImageBrush x:Key="deletePlaylist" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\minus.png" />
+        <ImageBrush x:Key="editPlaylist" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\edit.png" />
+        <ImageBrush x:Key="loop" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\loop.png" />
+        <Image x:Key="selectFolder" x:Shared ="false" Source="C:\Users\48571\Downloads\projekt\src\folder.png" Width="16" Height="16" />
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <DockPanel>
+            <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"  BorderThickness="0" DockPanel.Dock="Right">
+                <StackPanel Orientation="Vertical" MinWidth="100">
+                    <StackPanel MinWidth="136">
+                        <DockPanel Background="#FFF0F0F0">
+                            <StackPanel HorizontalAlignment="Stretch" Orientation="Horizontal">
+                                <Label Content="Playlists" HorizontalAlignment="Center" VerticalAlignment="Top" Height="27" FontSize="14"/>
+                            </StackPanel>
+                            <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" DockPanel.Dock="Right" HorizontalAlignment="Right" Margin="3">
+                                <Button x:Name="createPlaylistButton" Background="{StaticResource addPlaylist}" Click="CreatePlaylistButton_Click" Margin="0,2,2,2" Width="18" Height="18" BorderThickness="0" HorizontalAlignment="Left"/>
+                                <Button x:Name="editPlaylistButton" Background="{StaticResource editPlaylist}" Click="EditPlaylistButton_Click" Margin="2,2,2,2" Width="18" Height="18" BorderThickness="0" HorizontalAlignment="Center"/>
+                                <Button x:Name="deletePlaylistButton" Background="{StaticResource deletePlaylist}" Click="DeletePlaylistButton_Click" Margin="2,2,2,2" Width="18" Height="18" BorderThickness="0" HorizontalAlignment="Right"/>
+                            </WrapPanel>
+                        </DockPanel>
+                        <StackPanel x:Name="createPlaylistItemsStackPanel" VerticalAlignment="Top" Orientation="Vertical" Visibility="Collapsed" HorizontalAlignment="Stretch">
+                            <Button x:Name="cancelButton" Content="Cancel" Click="CancelButton_Click" Margin="3"/>
+                            <Label x:Name="nazwaLabel" Content="Name: "/>
+                            <WrapPanel HorizontalAlignment="Center" Margin="0,0,0,4">
+                                <TextBox x:Name="playlistNameTextBox" HorizontalAlignment="Stretch" Margin="2,1,2,1" MinWidth="100"/>
+                                <Button x:Name="confirmButton" Margin="1,1,2,2" Background="{StaticResource confirm}" BorderThickness="0" Click="ConfirmButton_Click" Height="20" Width="20"/>
+                            </WrapPanel>
+                        </StackPanel>
+                    </StackPanel>
+                    <ListBox x:Name="playlist_listBox" ScrollViewer.CanContentScroll="True" Background="Transparent"  ItemsSource="{Binding ItemsSource}" VerticalAlignment="Top" BorderThickness="0" SelectionChanged="playlist_listBox_SelectionChanged" FontSize="13"/>
+                </StackPanel>
+            </ScrollViewer>
+            <Menu x:Name="mainMenu" DockPanel.Dock="Top" IsMainMenu="True" Height="27">
+                <MenuItem Header=". . ." Height="27" FontSize="14">
+                    <MenuItem Header="Select folder" Icon="{StaticResource selectFolder}" Margin="3,0,0,0" Click="Button_Click" FontWeight="Normal" Height="20"/>
+                </MenuItem>
+                <MenuItem x:Name="allSongsButton" Header="Music" Click="allSongsButton_Click" Height="27" FontSize="14"/>
+            </Menu>
+            <ScrollViewer BorderThickness="0" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" >
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="C:\Users\48571\Downloads\projekt\src\background3.png" TileMode="Tile" Opacity="0.7"/>
+                    </Grid.Background>
+                    <ListBox x:Name="listBox" ScrollViewer.CanContentScroll="True" Background="Transparent"  ItemsSource="{Binding ItemsSource}" VerticalAlignment="Top" BorderThickness="0" SelectionChanged="ListBox_SelectionChanged" FontSize="13"/>
+                </Grid>
+            </ScrollViewer>
+        </DockPanel>
+
+        <StackPanel Grid.Row="1" >
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="200">
+                        <Button x:Name="volumeButton" Margin="5,0,0,0"  Background="{StaticResource volume}" Click="VolumeButton_Click"  Height="25" Width="25" VerticalAlignment="Center" BorderThickness="0"/>
+                        <Button x:Name="mutedButton" Margin="5,0,0,0"  Background="{StaticResource muted}" Click="VolumeButton_Click"  Height="25" Width="25" VerticalAlignment="Center" BorderThickness="0" Visibility="Collapsed"/>
+                        <Slider x:Name="volumeSlider" Minimum="0.0" Maximum="1.0" SmallChange="0.01" Value="{Binding ElementName=mediaPlayer, Path=Volume}" BorderThickness="0" Width="150" Height="18" Margin="15,3,3,3" Visibility="Hidden" />
+                    </StackPanel>
+                    <StackPanel x:Name="buttonsStackPanel" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="backButton" Background="{StaticResource previous}" Margin="3" Width="20" Height="20" BorderThickness="0" Foreground="Transparent" Click="BackButton_Click"/>
+                        <Button x:Name="playButton" Background="{StaticResource play}" Margin="3" Click="PlayButton_Click" IsEnabled="True" Width="30" Height="30" FontWeight="Bold" Foreground="Transparent" BorderThickness="0" Visibility="Visible"/>
+                        <Button x:Name="pauseButton" Background="{StaticResource pause}"  Margin="3" Click="PauseButton_Click" IsEnabled="True" Width="30" Height="30" FontWeight="Bold" Foreground="Transparent" BorderThickness="0" Visibility="Collapsed"/>
+                        <Button x:Name="skipButton" Background="{StaticResource next}" Margin="3" Width="20" Height="20" BorderThickness="0" Foreground="Transparent" Click="SkipButton_Click"/>
+                    </StackPanel>
+                    <Button x:Name="loopButton" Margin="0,3,17,3" Background="{StaticResource loop}" HorizontalAlignment="Right" Width="25" Height="25" Click="LoopButton_Click" BorderThickness="0" Visibility="Collapsed"/>
+                    <Button x:Name="shuffleButton" Margin="0,3,17,3" Background="{StaticResource shuffle}" HorizontalAlignment="Right" Width="25" Height="25" Click="ShuffleButton_Click" BorderThickness="0" Visibility="Collapsed"/>
+                    <Button x:Name="alphabeticalButton" Margin="0,3,17,3" Background="{StaticResource alphabetical}" HorizontalAlignment="Right" Width="25" Height="25" Click="AlphabeticalButton_Click" Visibility="Visible" BorderThickness="0"/>
+                </Grid>
+                <ProgressBar Margin="5,0,0,5" x:Name="progressBar" Height="15" Width="450" HorizontalAlignment="Stretch" MouseDown="ProgressBar_Click"/>
+                <TextBlock x:Name="currentSongTextBlock" Text="Aktualnie odtwarzany utwór: " HorizontalAlignment="Stretch" Margin="5,0,0,5"/>
+            </StackPanel>
+        </StackPanel>
+        <UserControl Visibility="Collapsed">
+            <MediaPlayer x:Name="mediaPlayer" MediaEnded="MediaPlayer_MediaEnded"/>
+        </UserControl>
+    </Grid>
+</Window>
