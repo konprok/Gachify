@@ -19,7 +19,6 @@ namespace projekt
     public partial class MainWindow : Window
     {
         private bool playlistDeleted = false;
-        private bool playlistIsPlaying = false;
         private SaveFileDialog saveFileDialog;
         private OpenFileDialog openFileDialog;
         bool wasBackButtonClicked = false;
@@ -397,7 +396,6 @@ namespace projekt
                     {
                         UpdatePlayPauseButtons();
                     }
-                    playlistIsPlaying = true;
                     string relativePath = @"..\..\..\playlists";
                     string folderPath = System.IO.Path.GetFullPath(relativePath);
                     folderPath = folderPath + "\\";
@@ -420,7 +418,6 @@ namespace projekt
             {
                 UpdatePlayPauseButtons();
             }
-            playlistIsPlaying = false;
             string lastFolder = LoadLastFolder();
             sPath = lastFolder;
             var files = Directory.GetFiles(lastFolder, "*.mp3");
