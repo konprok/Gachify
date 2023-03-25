@@ -11,8 +11,6 @@ using OpenFileDialog = System.Windows.Forms.OpenFileDialog;
 using SaveFileDialog = System.Windows.Forms.SaveFileDialog;
 using File = System.IO.File;
 using MessageBox = System.Windows.Forms.MessageBox;
-using Microsoft.VisualBasic.ApplicationServices;
-using System.Reflection;
 
 namespace projekt
 {
@@ -25,7 +23,6 @@ namespace projekt
         private string sPath;
         private List<int> unplayedIndexes = new List<int>();
         private List<int> playedIndexes = new List<int>();
-
 
         public MainWindow()
         {
@@ -46,9 +43,11 @@ namespace projekt
             if (!string.IsNullOrEmpty(lastFolder))
             {
                 sPath = lastFolder;
-                var files = Directory.GetFiles(lastFolder, "*.mp3");
-                listBox.ItemsSource = files.Select(f => Path.GetFileNameWithoutExtension(f));
-                playButton.IsEnabled = true;
+                if (Directory.Exists(lastFolder))
+                {
+                    var files = Directory.GetFiles(lastFolder, "*.mp3");
+                    listBox.ItemsSource = files.Select(f => Path.GetFileNameWithoutExtension(f));
+                }
 
                 string relativePath = @"..\..\..\playlists";
                 string folderPath = System.IO.Path.GetFullPath(relativePath);
@@ -452,7 +451,6 @@ namespace projekt
 
         private void EditPlaylistButton_Click(object sender, RoutedEventArgs e)
         {
-
             string? playlistName = playlist_listBox.SelectedItem as string;
             if (playlistName != null)
             {
@@ -478,7 +476,6 @@ namespace projekt
                 listBox.ItemsSource = fileNames.Select(f => Path.GetFileNameWithoutExtension(f));
             }
         }
-
         private void LoopButton_Click(object sender, RoutedEventArgs e)
         {
             if (loopButton.Visibility == Visibility.Visible)
