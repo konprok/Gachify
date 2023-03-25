@@ -56,7 +56,7 @@ namespace projekt
                 string folderPath = System.IO.Path.GetFullPath(relativePath);
                 if (!Directory.Exists(folderPath))
                 {
-                    string whereisfolder = System.IO.Path.GetFullPath(@"..\..\..\..\projekt");
+                    string whereisfolder = System.IO.Path.GetFullPath(@"..\..\..");
                     whereisfolder = whereisfolder + "\\";
                     Directory.CreateDirectory(whereisfolder + "playlists");
                 }
@@ -70,7 +70,7 @@ namespace projekt
                 string folderPath = System.IO.Path.GetFullPath(relativePath);
                 if (!Directory.Exists(folderPath))
                 {
-                    string whereisfolder = System.IO.Path.GetFullPath(@"..\..\..\..\projekt");
+                    string whereisfolder = System.IO.Path.GetFullPath(@"..\..\..");
                     whereisfolder = whereisfolder + "\\";
                     Directory.CreateDirectory(whereisfolder + "playlists");
                 }
