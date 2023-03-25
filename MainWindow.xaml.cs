@@ -11,6 +11,8 @@ using OpenFileDialog = System.Windows.Forms.OpenFileDialog;
 using SaveFileDialog = System.Windows.Forms.SaveFileDialog;
 using File = System.IO.File;
 using MessageBox = System.Windows.Forms.MessageBox;
+using static System.Net.WebRequestMethods;
+using System.Windows.Forms;
 
 namespace projekt
 {
@@ -108,7 +110,7 @@ namespace projekt
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void SelectFolder_Click(object sender, RoutedEventArgs e)
         {
             var dialog = new System.Windows.Forms.FolderBrowserDialog();
             System.Windows.Forms.DialogResult result = dialog.ShowDialog();
@@ -334,12 +336,27 @@ namespace projekt
                 alphabeticalButton.Visibility = Visibility.Collapsed;
             }
         }
+        private void LoopButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (loopButton.Visibility == Visibility.Visible)
+            {
+                alphabeticalButton.Visibility = Visibility.Visible;
+                loopButton.Visibility = Visibility.Collapsed;
+            }
+        }
 
         private void CreatePlaylistButton_Click(object sender, RoutedEventArgs e)
         {
-            createPlaylistItemsStackPanel.Visibility = Visibility.Visible;
-            createPlaylistButton.Visibility = Visibility.Collapsed;
-            cancelButton.Visibility = Visibility.Visible;
+            if (Directory.Exists(sPath))
+            {
+                createPlaylistItemsStackPanel.Visibility = Visibility.Visible;
+                createPlaylistButton.Visibility = Visibility.Collapsed;
+                cancelButton.Visibility = Visibility.Visible;
+            }
+            else
+            { 
+                MessageBox.Show("Choose your music folder first!");
+            }
         }
 
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
@@ -474,14 +491,6 @@ namespace projekt
 
                 string[] fileNames = File.ReadAllLines(filePath);
                 listBox.ItemsSource = fileNames.Select(f => Path.GetFileNameWithoutExtension(f));
-            }
-        }
-        private void LoopButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (loopButton.Visibility == Visibility.Visible)
-            {
-                alphabeticalButton.Visibility = Visibility.Visible;
-                loopButton.Visibility = Visibility.Collapsed;
             }
         }
     }
