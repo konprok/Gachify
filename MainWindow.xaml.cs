@@ -47,7 +47,8 @@ namespace projekt
                 sPath = lastFolder;
                 if (Directory.Exists(lastFolder))
                 {
-                    var files = Directory.GetFiles(lastFolder, "*.mp3|*.wav|*.flac|*.aac|*.wma");
+                    var files = new List<string>();
+                    files.AddRange(Directory.GetFiles(lastFolder, "*.mp3"));
                     listBox.ItemsSource = files.Select(f => Path.GetFileNameWithoutExtension(f));
                 }
 
@@ -122,7 +123,7 @@ namespace projekt
             });
 
             volumeSlider.SetBinding(Slider.ValueProperty, new System.Windows.Data.Binding("Volume") { Source = mediaPlayer });
-            currentSongTextBlock.Text = "Aktualnie odtwarzany utwór: ";
+            currentSongTextBlock.Text = "Current song ";
 
         }
 
@@ -133,10 +134,11 @@ namespace projekt
             if (result == System.Windows.Forms.DialogResult.OK)
             {
                 var folder = dialog.SelectedPath;
-                var files = Directory.GetFiles(folder, "*.mp3");
-                sPath = folder;
+                var files = new List<string>();
+                files.AddRange(Directory.GetFiles(folder, "*.mp3"));
                 listBox.ItemsSource = files.Select(f => Path.GetFileNameWithoutExtension(f));
-                MessageBox.Show("Znaleziono " + files.Length.ToString() + " plików MP3", "Wynik wyszukiwania");
+                sPath = folder;
+                MessageBox.Show(files.Count.ToString() + " songs found", "Search result");
                 SaveLastFolder(folder);
             }
         }
@@ -222,7 +224,7 @@ namespace projekt
                         playedIndexes.Add(listBox.SelectedIndex);
                     }
                 }
-                currentSongTextBlock.Text = "Aktualnie odtwarzany utwór: " + selectedItem;
+                currentSongTextBlock.Text = "Current song: " + selectedItem;
 
             }
 
@@ -256,7 +258,7 @@ namespace projekt
             }
             var selectedItem = listBox.SelectedItem as string;
 
-            currentSongTextBlock.Text = "Aktualnie odtwarzany utwór: " + selectedItem;
+            currentSongTextBlock.Text = "Currnet song: " + selectedItem;
 
             mediaPlayer.MediaEnded += (sender, e) =>
             {
