@@ -53,10 +53,26 @@ namespace projekt
 
                 string relativePath = @"..\..\..\playlists";
                 string folderPath = System.IO.Path.GetFullPath(relativePath);
+                if (!Directory.Exists(folderPath))
+                {
+                    string whereisfolder = System.IO.Path.GetFullPath(@"..\..\..\..\projekt");
+                    whereisfolder = whereisfolder + "\\";
+                    Directory.CreateDirectory(whereisfolder + "playlists");
+                }
                 folderPath = folderPath + "\\";
                 string[] fileNames = Directory.GetFiles(folderPath);
                 playlist_listBox.ItemsSource = fileNames.Select(f => Path.GetFileNameWithoutExtension(f));
-
+            }
+            else
+            {
+                string relativePath = @"..\..\..\playlists";
+                string folderPath = System.IO.Path.GetFullPath(relativePath);
+                if (!Directory.Exists(folderPath))
+                {
+                    string whereisfolder = System.IO.Path.GetFullPath(@"..\..\..\..\projekt");
+                    whereisfolder = whereisfolder + "\\";
+                    Directory.CreateDirectory(whereisfolder + "playlists");
+                }
             }
 
             mediaPlayer.MediaOpened += (sender, e) =>
@@ -397,32 +413,22 @@ namespace projekt
         {
             if (playlist_listBox.SelectedItem != null)
             {
-                if (playlistDeleted)
-                {
-                    string lastFolder = LoadLastFolder();
-                    var files = Directory.GetFiles(lastFolder, "*.mp3");
-                    listBox.ItemsSource = files.Select(f => Path.GetFileNameWithoutExtension(f));
-                    playlistDeleted = false;
-                }
-                else
-                {
-                    playedIndexes.Clear();
-                    mediaPlayer.Close();
-                    if (pauseButton.Visibility == Visibility.Visible)
-                    {
-                        UpdatePlayPauseButtons();
-                    }
-                    string relativePath = @"..\..\..\playlists";
-                    string folderPath = System.IO.Path.GetFullPath(relativePath);
-                    folderPath = folderPath + "\\";
-                    var selectedItem = playlist_listBox.SelectedItem as string;
-                    string filePath = folderPath + selectedItem;
 
-                    string[] fileNames = File.ReadAllLines(filePath);
-                    listBox.ItemsSource = fileNames.Select(f => Path.GetFileNameWithoutExtension(f));
+                playedIndexes.Clear();
+                mediaPlayer.Close();
+                if (pauseButton.Visibility == Visibility.Visible)
+                {
+                    UpdatePlayPauseButtons();
                 }
+                string relativePath = @"..\..\..\playlists";
+                string folderPath = System.IO.Path.GetFullPath(relativePath);
+                folderPath = folderPath + "\\";
+                var selectedItem = playlist_listBox.SelectedItem as string;
+                string filePath = folderPath + selectedItem;
+
+                string[] fileNames = File.ReadAllLines(filePath);
+                listBox.ItemsSource = fileNames.Select(f => Path.GetFileNameWithoutExtension(f));
             }
-
         }
 
         private void allSongsButton_Click(object sender, RoutedEventArgs e)
@@ -452,7 +458,6 @@ namespace projekt
 
         private void DeletePlaylistButton_Click(object sender, RoutedEventArgs e)
         {
-            playlistDeleted = true;
             string relativePath = @"..\..\..\playlists";
             string folderPath = System.IO.Path.GetFullPath(relativePath);
             folderPath = folderPath + "\\";
@@ -464,6 +469,12 @@ namespace projekt
             }
             string[] fileNames = Directory.GetFiles(folderPath);
             playlist_listBox.ItemsSource = fileNames.Select(f => Path.GetFileNameWithoutExtension(f));
+            string lastFolder = LoadLastFolder();
+            var files = Directory.GetFiles(lastFolder, "*.mp3");
+            listBox.ItemsSource = files.Select(f => Path.GetFileNameWithoutExtension(f));
+            NextSong();
+            mediaPlayer.Pause();
+            UpdatePlayPauseButtons();
         }
 
         private void EditPlaylistButton_Click(object sender, RoutedEventArgs e)
@@ -492,6 +503,9 @@ namespace projekt
                 string[] fileNames = File.ReadAllLines(filePath);
                 listBox.ItemsSource = fileNames.Select(f => Path.GetFileNameWithoutExtension(f));
             }
+            NextSong();
+            mediaPlayer.Pause();
+            UpdatePlayPauseButtons();
         }
     }
 }
