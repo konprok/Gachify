@@ -11,7 +11,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="src\alphabetical.png" />
+    <None Remove="src\background3.png" />
+    <None Remove="src\confirm.png" />
+    <None Remove="src\edit.png" />
+    <None Remove="src\folder.png" />
+    <None Remove="src\gachibar.png" />
     <None Remove="src\gachiTemplate.png" />
+    <None Remove="src\loop.png" />
+    <None Remove="src\minus.png" />
+    <None Remove="src\muted.png" />
+    <None Remove="src\next.png" />
+    <None Remove="src\pause.png" />
+    <None Remove="src\play.png" />
+    <None Remove="src\plus.png" />
+    <None Remove="src\previous.png" />
+    <None Remove="src\shuffle.png" />
+    <None Remove="src\volume.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,7 +40,57 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="src\gachiTemplate.png" />
+    <Resource Include="src\alphabetical.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\background3.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\confirm.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\edit.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\folder.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\gachibar.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\gachiTemplate.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\loop.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\minus.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\muted.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\next.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\pause.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\play.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\plus.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\previous.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\shuffle.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\volume.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>

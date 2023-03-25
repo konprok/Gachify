@@ -5,23 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projekt"
         mc:Ignorable="d"
-        Title="Music Player" Height="600" Width="700" WindowStyle="SingleBorderWindow" MinHeight="600" MinWidth="700">
-
+        Title="Gachify" Height="600" Width="700" WindowStyle="SingleBorderWindow" MinHeight="600" MinWidth="700">
     <Window.Resources>
-        <ImageBrush x:Key="next" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\next.png"/>
-        <ImageBrush x:Key="previous" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\previous.png" />
-        <ImageBrush x:Key="play" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\play.png" />
-        <ImageBrush x:Key="pause" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\pause.png" />
-        <ImageBrush x:Key="volume" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\volume.png" />
-        <ImageBrush x:Key="shuffle" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\shuffle.png" />
-        <ImageBrush x:Key="alphabetical" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\alphabetical.png" />
-        <ImageBrush x:Key="muted" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\muted.png" />
-        <ImageBrush x:Key="confirm" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\confirm.png" />
-        <ImageBrush x:Key="addPlaylist" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\plus.png" />
-        <ImageBrush x:Key="deletePlaylist" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\minus.png" />
-        <ImageBrush x:Key="editPlaylist" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\edit.png" />
-        <ImageBrush x:Key="loop" x:Shared ="false" ImageSource="C:\Users\48571\Downloads\projekt\src\loop.png" />
-        <Image x:Key="selectFolder" x:Shared ="false" Source="C:\Users\48571\Downloads\projekt\src\folder.png" Width="16" Height="16" />
+        <ImageBrush x:Key="next" x:Shared ="false" ImageSource="src\next.png" />
+        <ImageBrush x:Key="previous" x:Shared ="false" ImageSource="src\previous.png" />
+        <ImageBrush x:Key="play" x:Shared ="false" ImageSource="src\play.png" />
+        <ImageBrush x:Key="pause" x:Shared ="false" ImageSource="src\pause.png" />
+        <ImageBrush x:Key="volume" x:Shared ="false" ImageSource="src\volume.png" />
+        <ImageBrush x:Key="shuffle" x:Shared ="false" ImageSource="src\shuffle.png" />
+        <ImageBrush x:Key="alphabetical" x:Shared ="false" ImageSource="src\alphabetical.png" />
+        <ImageBrush x:Key="muted" x:Shared ="false" ImageSource="src\muted.png" />
+        <ImageBrush x:Key="confirm" x:Shared ="false" ImageSource="src\confirm.png" />
+        <ImageBrush x:Key="addPlaylist" x:Shared ="false" ImageSource="src\plus.png" />
+        <ImageBrush x:Key="deletePlaylist" x:Shared ="false" ImageSource="src\minus.png" />
+        <ImageBrush x:Key="editPlaylist" x:Shared ="false" ImageSource="src\edit.png" />
+        <ImageBrush x:Key="loop" x:Shared ="false" ImageSource="src\loop.png" />
+        <Image x:Key="selectFolder" x:Shared ="false" Source="src\folder.png" Width="16" Height="16" />
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -58,14 +57,18 @@
                 <MenuItem Header=". . ." Height="27" FontSize="14">
                     <MenuItem Header="Select folder" Icon="{StaticResource selectFolder}" Margin="3,0,0,0" Click="Button_Click" FontWeight="Normal" Height="20"/>
                 </MenuItem>
-                <MenuItem x:Name="allSongsButton" Header="Music" Click="allSongsButton_Click" Height="27" FontSize="14"/>
+                <MenuItem x:Name="allSongsButton" Header="Songs" Click="allSongsButton_Click" Height="27" FontSize="14"/>
             </Menu>
             <ScrollViewer BorderThickness="0" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" >
                 <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="35*"/>
+                        <ColumnDefinition Width="247*"/>
+                    </Grid.ColumnDefinitions>
                     <Grid.Background>
-                        <ImageBrush ImageSource="C:\Users\48571\Downloads\projekt\src\background3.png" TileMode="Tile" Opacity="0.7"/>
+                        <ImageBrush ImageSource="src\gachibar.png" TileMode="Tile" Opacity="0.75"/>
                     </Grid.Background>
-                    <ListBox x:Name="listBox" ScrollViewer.CanContentScroll="True" Background="Transparent"  ItemsSource="{Binding ItemsSource}" VerticalAlignment="Top" BorderThickness="0" SelectionChanged="ListBox_SelectionChanged" FontSize="13"/>
+                    <ListBox x:Name="listBox" ScrollViewer.CanContentScroll="True" Background="Transparent"  ItemsSource="{Binding ItemsSource}" VerticalAlignment="Top" BorderThickness="0" SelectionChanged="ListBox_SelectionChanged" FontSize="13" Grid.ColumnSpan="2"/>
                 </Grid>
             </ScrollViewer>
         </DockPanel>

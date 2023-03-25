@@ -12,6 +12,7 @@ using SaveFileDialog = System.Windows.Forms.SaveFileDialog;
 using File = System.IO.File;
 using MessageBox = System.Windows.Forms.MessageBox;
 using Microsoft.VisualBasic.ApplicationServices;
+using System.Reflection;
 
 namespace projekt
 {
@@ -31,7 +32,7 @@ namespace projekt
         {
             InitializeComponent();
             openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "Podaj plik żródłowy";
+            openFileDialog.Title = "Wybierz utowry";
             openFileDialog.DefaultExt = "mp3";
             openFileDialog.Filter = "Pliki muzyczne (*.mp3)|*.mp3|Pliki XML (*.xml)|*.xml|Wszystkie pliki (*.*)|*.*";
             openFileDialog.FilterIndex = 1;
@@ -50,7 +51,10 @@ namespace projekt
                 listBox.ItemsSource = files.Select(f => Path.GetFileNameWithoutExtension(f));
                 playButton.IsEnabled = true;
 
-                string[] fileNames = Directory.GetFiles("C:\\Users\\48571\\Downloads\\projekt\\playlists\\");
+                string relativePath = @"..\..\..\playlists";
+                string folderPath = System.IO.Path.GetFullPath(relativePath);
+                folderPath = folderPath + "\\";
+                string[] fileNames = Directory.GetFiles(folderPath);
                 playlist_listBox.ItemsSource = fileNames.Select(f => Path.GetFileNameWithoutExtension(f));
 
             }
@@ -114,6 +118,8 @@ namespace projekt
             {
                 var folder = dialog.SelectedPath;
                 var files = Directory.GetFiles(folder, "*.mp3");
+                sPath = folder;
+                listBox.ItemsSource = files.Select(f => Path.GetFileNameWithoutExtension(f));
                 MessageBox.Show("Znaleziono " + files.Length.ToString() + " plików MP3", "Wynik wyszukiwania");
                 SaveLastFolder(folder);
             }
@@ -349,7 +355,9 @@ namespace projekt
                 {
                     string[] fileNames = openFileDialog.FileNames;
 
-                    string folderPath = "C:\\Users\\48571\\Downloads\\projekt\\playlists\\";
+                    string relativePath = @"..\..\..\playlists";
+                    string folderPath = System.IO.Path.GetFullPath(relativePath);
+                    folderPath = folderPath + "\\";
                     string filePath = Path.Combine(folderPath, playlistName);
 
                     using (StreamWriter sw = new StreamWriter(filePath))
@@ -359,7 +367,7 @@ namespace projekt
                             sw.WriteLine(address);
                         }
                     }
-                    fileNames = Directory.GetFiles("C:\\Users\\48571\\Downloads\\projekt\\playlists\\");
+                    fileNames = Directory.GetFiles(folderPath);
                     playlist_listBox.ItemsSource = fileNames.Select(f => Path.GetFileNameWithoutExtension(f));
                     playlistNameTextBox.Text = "";
                 }
@@ -390,9 +398,11 @@ namespace projekt
                         UpdatePlayPauseButtons();
                     }
                     playlistIsPlaying = true;
-                    string sPath = "C:\\Users\\48571\\Downloads\\projekt\\playlists\\";
+                    string relativePath = @"..\..\..\playlists";
+                    string folderPath = System.IO.Path.GetFullPath(relativePath);
+                    folderPath = folderPath + "\\";
                     var selectedItem = playlist_listBox.SelectedItem as string;
-                    string filePath = sPath + selectedItem;
+                    string filePath = folderPath + selectedItem;
 
                     string[] fileNames = File.ReadAllLines(filePath);
                     listBox.ItemsSource = fileNames.Select(f => Path.GetFileNameWithoutExtension(f));
@@ -430,27 +440,31 @@ namespace projekt
         private void DeletePlaylistButton_Click(object sender, RoutedEventArgs e)
         {
             playlistDeleted = true;
-            string playlistPath = "C:\\Users\\48571\\Downloads\\projekt\\playlists\\";
+            string relativePath = @"..\..\..\playlists";
+            string folderPath = System.IO.Path.GetFullPath(relativePath);
+            folderPath = folderPath + "\\";
             var selectedItem = playlist_listBox.SelectedItem as string;
-            string filePath = playlistPath + selectedItem;
+            string filePath = folderPath + selectedItem;
             if (System.IO.File.Exists(filePath))
             {
                 System.IO.File.Delete(filePath);
             }
-            string[] fileNames = Directory.GetFiles("C:\\Users\\48571\\Downloads\\projekt\\playlists\\");
+            string[] fileNames = Directory.GetFiles(folderPath);
             playlist_listBox.ItemsSource = fileNames.Select(f => Path.GetFileNameWithoutExtension(f));
         }
 
         private void EditPlaylistButton_Click(object sender, RoutedEventArgs e)
         {
 
-            string playlistName = playlist_listBox.SelectedItem as string;
+            string? playlistName = playlist_listBox.SelectedItem as string;
             if (playlistName != null)
             {
                 bool? wynik = openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK;
                 string[] playlistNames = openFileDialog.FileNames;
 
-                string folderPath = "C:\\Users\\48571\\Downloads\\projekt\\playlists\\";
+                string relativePath = @"..\..\..\playlists";
+                string folderPath = System.IO.Path.GetFullPath(relativePath);
+                folderPath = folderPath + "\\";
                 string filePath = Path.Combine(folderPath, playlistName);
 
                 using (StreamWriter sw = new StreamWriter(filePath))
@@ -460,10 +474,8 @@ namespace projekt
                         sw.WriteLine(address);
                     }
                 }
-                playlistNames = Directory.GetFiles("C:\\Users\\48571\\Downloads\\projekt\\playlists\\");
+                playlistNames = Directory.GetFiles(folderPath);
                 playlist_listBox.ItemsSource = playlistNames.Select(f => Path.GetFileNameWithoutExtension(f));
-
-                string sPath = "C:\\Users\\48571\\Downloads\\projekt\\playlists\\";
 
                 string[] fileNames = File.ReadAllLines(filePath);
                 listBox.ItemsSource = fileNames.Select(f => Path.GetFileNameWithoutExtension(f));
