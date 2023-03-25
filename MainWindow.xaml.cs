@@ -47,7 +47,7 @@ namespace projekt
                 sPath = lastFolder;
                 if (Directory.Exists(lastFolder))
                 {
-                    var files = Directory.GetFiles(lastFolder, "*.mp3");
+                    var files = Directory.GetFiles(lastFolder, "*.mp3|*.wav|*.flac|*.aac|*.wma");
                     listBox.ItemsSource = files.Select(f => Path.GetFileNameWithoutExtension(f));
                 }
 
