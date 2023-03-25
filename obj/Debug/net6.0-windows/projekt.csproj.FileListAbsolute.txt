@@ -1,0 +1,96 @@
+D:\teraz, nauka\projekt\obj\Debug\net6.0-windows\projekt.csproj.AssemblyReference.cache
+D:\teraz, nauka\projekt\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\teraz, nauka\projekt\obj\Debug\net6.0-windows\App.g.cs
+D:\teraz, nauka\projekt\obj\Debug\net6.0-windows\projekt_MarkupCompile.cache
+D:\teraz, nauka\projekt\obj\Debug\net6.0-windows\projekt_MarkupCompile.lref
+D:\teraz, nauka\projekt\obj\Debug\net6.0-windows\projekt.csproj.ResolveComReference.cache
+D:\teraz, nauka\projekt\bin\Debug\net6.0-windows\projekt.exe
+D:\teraz, nauka\projekt\bin\Debug\net6.0-windows\projekt.deps.json
+D:\teraz, nauka\projekt\bin\Debug\net6.0-windows\projekt.runtimeconfig.json
+D:\teraz, nauka\projekt\bin\Debug\net6.0-windows\projekt.dll
+D:\teraz, nauka\projekt\bin\Debug\net6.0-windows\projekt.pdb
+D:\teraz, nauka\projekt\obj\Debug\net6.0-windows\MainWindow.baml
+D:\teraz, nauka\projekt\obj\Debug\net6.0-windows\projekt.g.resources
+D:\teraz, nauka\projekt\obj\Debug\net6.0-windows\projekt.GeneratedMSBuildEditorConfig.editorconfig
+D:\teraz, nauka\projekt\obj\Debug\net6.0-windows\projekt.AssemblyInfoInputs.cache
+D:\teraz, nauka\projekt\obj\Debug\net6.0-windows\projekt.AssemblyInfo.cs
+D:\teraz, nauka\projekt\obj\Debug\net6.0-windows\projekt.csproj.CoreCompileInputs.cache
+D:\teraz, nauka\projekt\obj\Debug\net6.0-windows\projekt.dll
+D:\teraz, nauka\projekt\obj\Debug\net6.0-windows\refint\projekt.dll
+D:\teraz, nauka\projekt\obj\Debug\net6.0-windows\projekt.pdb
+D:\teraz, nauka\projekt\obj\Debug\net6.0-windows\projekt.genruntimeconfig.cache
+D:\teraz, nauka\projekt\obj\Debug\net6.0-windows\ref\projekt.dll
+C:\Users\A\Downloads\projekt\bin\Debug\net6.0-windows\projekt.exe
+C:\Users\A\Downloads\projekt\bin\Debug\net6.0-windows\projekt.deps.json
+C:\Users\A\Downloads\projekt\bin\Debug\net6.0-windows\projekt.runtimeconfig.json
+C:\Users\A\Downloads\projekt\bin\Debug\net6.0-windows\projekt.dll
+C:\Users\A\Downloads\projekt\bin\Debug\net6.0-windows\projekt.pdb
+C:\Users\A\Downloads\projekt\obj\Debug\net6.0-windows\projekt.csproj.AssemblyReference.cache
+C:\Users\A\Downloads\projekt\obj\Debug\net6.0-windows\projekt.csproj.ResolveComReference.cache
+C:\Users\A\Downloads\projekt\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\A\Downloads\projekt\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\A\Downloads\projekt\obj\Debug\net6.0-windows\projekt_MarkupCompile.cache
+C:\Users\A\Downloads\projekt\obj\Debug\net6.0-windows\projekt_MarkupCompile.lref
+C:\Users\A\Downloads\projekt\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\A\Downloads\projekt\obj\Debug\net6.0-windows\projekt.g.resources
+C:\Users\A\Downloads\projekt\obj\Debug\net6.0-windows\projekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\A\Downloads\projekt\obj\Debug\net6.0-windows\projekt.AssemblyInfoInputs.cache
+C:\Users\A\Downloads\projekt\obj\Debug\net6.0-windows\projekt.AssemblyInfo.cs
+C:\Users\A\Downloads\projekt\obj\Debug\net6.0-windows\projekt.csproj.CoreCompileInputs.cache
+C:\Users\A\Downloads\projekt\obj\Debug\net6.0-windows\projekt.dll
+C:\Users\A\Downloads\projekt\obj\Debug\net6.0-windows\refint\projekt.dll
+C:\Users\A\Downloads\projekt\obj\Debug\net6.0-windows\projekt.pdb
+C:\Users\A\Downloads\projekt\obj\Debug\net6.0-windows\projekt.genruntimeconfig.cache
+C:\Users\A\Downloads\projekt\obj\Debug\net6.0-windows\ref\projekt.dll
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\projekt.csproj.AssemblyReference.cache
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\projekt.csproj.ResolveComReference.cache
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\projekt_MarkupCompile.cache
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\projekt_MarkupCompile.lref
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\projekt.dll
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\refint\projekt.dll
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\projekt.pdb
+C:\Users\48571\Downloads\projekt\bin\Debug\net6.0-windows\projekt.exe
+C:\Users\48571\Downloads\projekt\bin\Debug\net6.0-windows\projekt.deps.json
+C:\Users\48571\Downloads\projekt\bin\Debug\net6.0-windows\projekt.runtimeconfig.json
+C:\Users\48571\Downloads\projekt\bin\Debug\net6.0-windows\projekt.dll
+C:\Users\48571\Downloads\projekt\bin\Debug\net6.0-windows\projekt.pdb
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\projekt.g.resources
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\projekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\projekt.AssemblyInfoInputs.cache
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\projekt.AssemblyInfo.cs
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\projekt.csproj.CoreCompileInputs.cache
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\projekt.genruntimeconfig.cache
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\ref\projekt.dll
+C:\Users\48571\Downloads\projekt\bin\Debug\net6.0-windows\Microsoft.WindowsAPICodePack.dll
+C:\Users\48571\Downloads\projekt\bin\Debug\net6.0-windows\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\projekt.csproj.CopyComplete
+C:\Users\48571\Downloads\projekt\obj\Debug\net6.0-windows\projekt_Content.g.cs
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\bin\Debug\net6.0-windows\projekt.exe
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\bin\Debug\net6.0-windows\projekt.deps.json
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\bin\Debug\net6.0-windows\projekt.runtimeconfig.json
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\bin\Debug\net6.0-windows\projekt.dll
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\bin\Debug\net6.0-windows\projekt.pdb
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\bin\Debug\net6.0-windows\Microsoft.WindowsAPICodePack.dll
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\bin\Debug\net6.0-windows\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\projekt.csproj.AssemblyReference.cache
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\projekt.csproj.ResolveComReference.cache
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\projekt_Content.g.cs
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\projekt_MarkupCompile.cache
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\projekt_MarkupCompile.lref
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\projekt.g.resources
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\projekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\projekt.AssemblyInfoInputs.cache
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\projekt.AssemblyInfo.cs
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\projekt.csproj.CoreCompileInputs.cache
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\projekt.csproj.CopyComplete
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\projekt.dll
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\refint\projekt.dll
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\projekt.pdb
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\projekt.genruntimeconfig.cache
+C:\Users\48571\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Pulpit\projekt\obj\Debug\net6.0-windows\ref\projekt.dll
