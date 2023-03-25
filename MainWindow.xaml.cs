@@ -123,7 +123,7 @@ namespace projekt
             });
 
             volumeSlider.SetBinding(Slider.ValueProperty, new System.Windows.Data.Binding("Volume") { Source = mediaPlayer });
-            currentSongTextBlock.Text = "Current song ";
+            currentSongTextBlock.Text = "Current song: ";
 
         }
 
